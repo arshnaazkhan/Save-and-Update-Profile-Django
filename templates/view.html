@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Data </title>
+</head>
+
+<body>
+    <h1 class=" text-center p-4 bg-dark text-white">UPLOADED DATA</h1>
+    <div class="row">
+        {% for i in prof %}
+        <img src="{{i.profile_pic.url}}" alt="" class="card-img-top" height="50px">
+        {{i.full_name}}
+        {{i.email}}
+        {{i.date_of_birth}}
+        {{i.Contact_No}}
+        <br>
+
+        {% endfor %}
+        {% comment %} {% for x in prof %}
+        <div class="col-sm-4">
+            <div class="card m-2">
+                <div class="card-hooter text-center">
+                    <small class="text-muted">{{x.full_name}}</small>
+                </div>
+                <div class="card-hooter text-center">
+                    <small class="text-muted">{{x.email}}</small>
+                </div>
+                <div class="card-hooter text-center">
+                    <small class="text-muted">{{x.date_of_birth}}</small>
+                </div>
+                <div class="card-hooter text-center">
+                    <small class="text-muted">{{x.Contact_No}}</small>
+                </div>
+                <img src="{{x.profile_pic.url}}" alt="" class="card-img-top" height="400px">
+
+            </div>
+        </div>
+        {% endfor %} {% endcomment %}
+    </div>
+</body>
+
+</html>
